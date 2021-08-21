@@ -1,0 +1,7 @@
+/* components/topBar/index.wxss */
+.nav{
+  color: black;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}

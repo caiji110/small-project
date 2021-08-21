@@ -1,0 +1,5 @@
+<!--components/topBar/index.wxml-->
+<view class="nav" 
+  style="height:{{navHeight}}px;margin-top:{{ statusBarHeight }}px;line-height:{{navHeight}}px">
+{{title}}
+</view>

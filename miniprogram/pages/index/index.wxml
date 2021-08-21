@@ -1,0 +1,72 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+<view class="index-container">
+  <view class="topBar" >
+  <swiper
+    autoplay = 'true' 
+    class="swiper-comtanier">
+    <swiper-item>
+      <image src="https://img0.baidu.com/it/u=362450883,3002096826&fm=26&fmt=auto&gp=0.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://img0.baidu.com/it/u=16662244,2832316232&fm=26&fmt=auto&gp=0.jpg"></image>
+    </swiper-item>
+   
+    <swiper-item>
+      <image src="https://img2.baidu.com/it/u=888573610,2458226848&fm=26&fmt=auto&gp=0.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+  <view 
+  bindtap="onClickToGetBtn"
+  class="get-card">
+  <view class="get-card-left">
+    <view class="card-left-top">捞个人？</view>
+    <view class="card-left-bottom">最有趣的人都在这里，你还在等什么？</view>
+  </view>
+  <view class="top-get">立即逛逛</view>
+</view>
+<view class="get-card second">
+  <view class="get-card-left">
+    <view class="card-left-top group">组个局？</view>
+    <view class="card-left-bottom">跟有趣的人一起去玩耍！</view>
+  </view>
+  <view class="top-get">立即逛逛</view>
+</view>
+<view class="get-card third">
+  <view class="get-card-left">
+    <view class="card-left-top group">吐个槽？</view>
+    <view class="card-left-bottom">跟有趣的人一起去玩耍！</view>
+  </view>
+  <view class="top-get">立即逛逛</view>
+</view>
+<view 
+  bindtap="onClickPagesBtn"
+  class="tab-bar">
+  <view
+    data-index="0"
+    class="home-icon">
+    <image 
+      data-index="0"
+      class="{{currentIndex==0?'btn-hover':'' }}"
+      src="{{ currentIndex==0?'../../assets/icons/home1.png':'../../assets/icons/home0.png' }}"></image>
+  </view>
+  <view 
+    data-index="1"
+    class="add-icon">
+   <view>
+    <view 
+      data-index="1"
+      class="cuIcon cuIcon-add add"></view>
+   </view>
+  </view>
+  <view 
+    data-index="2"
+    class="profile-icon">
+    <image 
+      class="{{currentIndex==2?'btn-hover':'' }}"
+      data-index="2"
+      src="{{ currentIndex==2?'../../assets/icons/profile1.png':'../../assets/icons/profile0.png' }}"></image>
+  </view>
+</view>
+</view>
