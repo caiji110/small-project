@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "home": "../../components/home/index"
+    "home": "../../components/home/index",
+    "me" : "../../components/me/index"
   }
 }

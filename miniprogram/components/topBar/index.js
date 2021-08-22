@@ -28,6 +28,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onClickBackBtn(){
+      wx.navigateTo({
+        url: '../index/index',
+      })
+    }
   }
 })

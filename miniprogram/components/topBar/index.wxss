@@ -1,7 +1,29 @@
 /* components/topBar/index.wxss */
+@import "../../colorui/icon.wxss";
+@import "../../colorui/main.wxss";
 .nav{
+  width: 100vw;
+  display: flex;
   color: black;
   font-size: 36rpx;
   font-weight: bold;
+  text-align: center;
+  position: fixed;
+
+  top: 0;
+}
+.left_icon{
+  
+  height: 48rpx;
+  border: 1px solid red;
+}
+.title{
+  margin: 0 auto;
+  width: 175rpx;
+  position: relative;
+  left: -48rpx;
+}
+.back-icon{
+  width: 96rpx;
   text-align: center;
 }

@@ -1,0 +1,112 @@
+
+<view class="top-header">
+  <view class="userinfo">
+    <view 
+      class="userinfo-avatar"
+      bindtap="onChangeAvatar">
+      <image src="{{compressImg?compressImg:'cloud://cloud1-5gqp7vjo23b55255.636c-cloud1-5gqp7vjo23b55255-1305195095/userAvatar/likeyouAvatar (2).png'}}" ></image>
+    </view>
+    <view class="userinfo-name">
+    <view>{{UserName?UserName:"立刻有"}}</view>
+    </view>
+  </view>
+  <view class="my-join">
+  <view>
+    <view class="like size">
+      <view class="cuIcon-likefill icon-like"/>
+    </view>
+    <view class="tips">发布的局</view>
+  </view>
+  <view>
+    <view class="game size">
+      <view class="cuIcon-game icon-game"/>
+    </view>
+    <view class="tips">加入的局</view>
+  </view>
+  <view>
+    <view class="favor size">
+      <view class="cuIcon-friendfavor icon-favor"/>
+    </view>
+    <view class="tips">我捞的人</view>
+  </view>
+</view>
+</view>
+
+<!-- <view class="buttons-container">
+  <view 
+    class="group parted-group"
+    bindtap="onClickTurnToMyGroup">
+    <view class="title">加入的局</view>
+    <view class="btn btn-1">点击查看</view>
+  </view>
+
+  <view 
+    class="group built-group"
+    bindtap="onClickTurnToMyGroup">
+    <view class="title">发起的局</view>
+    <view class="btn btn-2">点击查看</view>
+  </view>
+</view> -->
+
+<view class="menu-container">
+  <MenuItem
+    wx:if="{{!$.UserStore.isAuthorize}}"
+    class="menu-item"
+    hover-class="menu-item-hover"
+    bindtap="onClickSignUpBtn"
+    leftIcon="cuIcon cuIcon-emoji"
+    title="注册登录"
+    rightIcon="cuIcon cuIcon-right"/>
+    <MenuItem
+    bindtap="onClickLoginBtn"
+    class="menu-item"
+    hover-class="menu-item-hover"
+    bindtap="onClickUpdateInfo"
+    leftIcon="cuIcon cuIcon-emoji"
+    title="完善信息"
+    rightIcon="cuIcon cuIcon-right"/>
+  <MenuItem
+    class="menu-item"
+    hover-class="menu-item-hover"
+    leftIcon="cuIcon cuIcon-activity"
+    title="使用攻略"
+    rightIcon="cuIcon cuIcon-right"/>
+  <MenuItem
+    class="menu-item"
+    hover-class="menu-item-hover"
+    bindtap="onClickContectUsBtn"
+    leftIcon="cuIcon cuIcon-service"
+    title="联系我们"
+    rightIcon="cuIcon cuIcon-right"/>
+  <MenuItem
+    class="menu-item"
+    hover-class="menu-item-hover"
+    leftIcon="cuIcon cuIcon-notice"
+    title="消息通知"
+    rightIcon="cuIcon cuIcon-right"/>
+  <MenuItem
+    class="menu-item"
+    hover-class="menu-item-hover"
+    bindtap="onClickTurnToAdminPage"
+    leftIcon="cuIcon cuIcon-settings"
+    title="管理员功能"
+    rightIcon="cuIcon cuIcon-right"/>
+</view> 
+<view class="status-box" >
+  
+  <view 
+    class="now-status"
+    bindtap="onClickshowStatusBtn">我的状态<text class="cuIcon-question q-icon"></text></view>
+  <view 
+    bindtap="onChangeStatusBtn"
+    class="set-status" >
+    <view 
+      class="CanGet {{$.UserStore.canBeGet?'active':''}}"
+      data-value='true'>可GET </view>
+    <view 
+      data-value='false'
+      class="disableGET {{!$.UserStore.canBeGet?'active':''}}">不可GET</view>
+  </view>
+</view>
+<view
+    style="height: 60px;"/>

@@ -1,0 +1,23 @@
+.menu-item-root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30rpx 40rpx;
+}
+
+.menu-item-root .left-icon {
+  font-size: 1.3rem;
+  display: grid;
+  place-content: center;
+}
+
+.menu-item-root .title {
+  font-size: 1rem;
+}
+.left-icon{
+  margin-right: 13rpx;
+}
+.right-icon{
+  width: 30rpx;
+  margin-left: auto;
+}

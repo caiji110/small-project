@@ -4,20 +4,22 @@
 <view wx:if="{{ currentIndex==0||currentIndex==1 }}">
   <home/>
 </view>
- 
+ <view wx:if="{{ currentIndex==2 }}">
+ <me/>
+ </view>
 <page-container 
   show="{{show}}"
   round="true"
   overlay="true"
   duration="500"
   position="bottom"
-  custom-style="height:50vh"
+  custom-style="height:40vh"
   overlay-style=""
 >
   <view class="detail-page">
-    <view class="">
-      <view>组个局</view>
-      <view>捞个人</view>
+    <view class="select-type">
+      <view class="chat">吐槽</view>
+      <view class="get">捞人</view>
     </view>
   </view>
 </page-container>

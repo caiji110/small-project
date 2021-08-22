@@ -1,0 +1,9 @@
+<view 
+  class="menu-item-root class"
+  hover-class="hover-class"
+  hover-start-time="{{ 0 }}"
+  hover-stay-time="{{ 200 }}">
+  <view class="{{ leftIcon }} left-icon"/>
+  <view class="title">{{ title }}</view>
+  <view class="{{ rightIcon }} right-icon"/>
+</view>

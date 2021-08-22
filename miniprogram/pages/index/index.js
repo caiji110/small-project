@@ -16,17 +16,10 @@ Page({
   onLoad: function (options) {
 
   },
-  onClickToGetBtn(){
-    wx.navigateTo({
-      url: '../Get/index',
-      fail:err =>{
-        console.log(err);
-      }
-    })
-  },
+
   onClickPagesBtn(e){
     let index = e.target.dataset.index
-    
+ 
    if(index==1){
      this.setData({
        show:!this.data.show

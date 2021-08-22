@@ -1,0 +1,82 @@
+<!--pages/login/index.wxml-->
+<TopBar
+  title=" 注册登录 "/>
+ 
+
+<view class="login-info">
+ <view class="login-info-box">
+  <view 
+    class="user-avatar"
+    bindtap="onClickUserProfile">
+    <image src="{{ userAvatarUrl }}"></image>
+  </view>
+  <view 
+    class="get-user-info"
+    bindtap="onClickUserProfile">
+    <view wx:if="{{ !userAvatarUrl }}">点击获取微信头像</view>
+    </view>
+  <view >
+    <text>昵称 :</text>
+    <input type="text" model:value="{{ nickName }}" placeholder="请填写昵称"/>
+  </view>
+  <view>
+    <text>校区 :</text>
+    <picker bindchange="onSelectCampus" value="{{index}}" range="{{campus}}">
+    <view class="picker">
+     <view wx:if="{{ selectCampus }}">
+      {{ selectCampus }}
+     </view>
+     <view style="color:#ADADAD" wx:else="{{ selectCampus }}">
+     请选择你所在的校区
+     </view>
+    </view>
+  </picker>
+  </view>
+  <view>
+    <text>年级 :</text>
+    <picker bindchange="onSelectgrade" value="{{index}}" range="{{grade}}">
+    <view class="picker">
+     <view wx:if="{{ selectGrade }}">
+      {{ selectGrade }}
+     </view>
+     <view style="color:#ADADAD" wx:else="{{ selectGrade }}">
+     请选择你的年级
+     </view>
+    </view>
+  </picker>
+  </view>
+  <view>
+    <text>性别 :</text>
+    <view class="section">
+  <picker bindchange="bindPickerChange" value="{{GenderIndex}}" range="{{gender}}">
+    <view >
+      <view style="color:#ADADAD" wx:if="{{ !startGender }}">
+      请选择你的性别
+     </view>
+     <view wx:else=" {{ startGender }}">
+        {{gender[GenderIndex]}}
+     </view>
+   
+    </view>
+  </picker>
+</view>
+  
+  
+  
+  </view>
+</view>
+  </view>
+  
+
+
+
+
+<button 
+  class="submit-btn" 
+  bindtap="SubmitInfo"
+  disabled="{{isSignUp}}"
+  >
+  <view wx:if="{{!isSignUp}}">提交信息</view>
+  <view wx:if="{{isSignUp}}">已注册</view>
+</button>
+
