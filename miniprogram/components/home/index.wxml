@@ -1,0 +1,39 @@
+<view class="topBar" >
+  <swiper
+    autoplay = 'true' 
+    class="swiper-comtanier">
+    <swiper-item>
+      <image src="https://img0.baidu.com/it/u=362450883,3002096826&fm=26&fmt=auto&gp=0.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://img0.baidu.com/it/u=16662244,2832316232&fm=26&fmt=auto&gp=0.jpg"></image>
+    </swiper-item>
+   
+    <swiper-item>
+      <image src="https://img2.baidu.com/it/u=888573610,2458226848&fm=26&fmt=auto&gp=0.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+  <view 
+  bindtap="onClickToGetBtn"
+  class="get-card">
+  <view class="get-card-left">
+    <view class="card-left-top">捞个人？</view>
+    <view class="card-left-bottom">最有趣的人都在这里，你还在等什么？</view>
+  </view>
+  <view class="top-get">立即逛逛</view>
+</view>
+<view class="get-card second">
+  <view class="get-card-left">
+    <view class="card-left-top group">组个局？</view>
+    <view class="card-left-bottom">跟有趣的人一起去玩耍！</view>
+  </view>
+  <view class="top-get">立即逛逛</view>
+</view>
+<view class="get-card third">
+  <view class="get-card-left">
+    <view class="card-left-top group">吐个槽？</view>
+    <view class="card-left-bottom">跟有趣的人一起去玩耍！</view>
+  </view>
+  <view class="top-get">立即逛逛</view>
+</view>

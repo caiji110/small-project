@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: { 
-    currentIndex:0
+    currentIndex:0,
+    show:false
   },
 
   /**
@@ -24,10 +25,25 @@ Page({
     })
   },
   onClickPagesBtn(e){
-    this.setData({
-      currentIndex: e.target.dataset.index
-    })
-    console.log(e.target.dataset.index);
+    let index = e.target.dataset.index
+    
+   if(index==1){
+     this.setData({
+       show:!this.data.show
+     })
+     if(this.data.currentIndex==1){
+        index=0
+     }
+   }
+   else{
+     this.setData({
+       show:false
+     })
+   }
+   console.log(index);
+   this.setData({
+    currentIndex: index
+  })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
