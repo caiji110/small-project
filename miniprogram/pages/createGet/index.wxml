@@ -1,0 +1,93 @@
+<import src="./template/MyTitle/index"/>
+<TopBar title='发布卡片'/>
+
+
+<view style="padding-top: 60px;">
+  <view class="card-contanier">
+    <view bindtap="onFinishCardBtn" class="top-btn">
+    <view  data-value="cancel">取消</view>
+    <view  data-value="publish">发布</view>
+  
+    </view>
+    <view class="card-ipt">
+      <view 
+        style="display:flex;"
+        bindtap="onSelectTagBtn">
+      <block
+        wx:key="index"
+        wx:for="{{tagList}}">
+        <tag 
+          data-index="{{index}}"
+          tagInfo="{{item}}" />
+      </block>
+      </view>
+      <view>
+        <textarea 
+          bindblur="onbindblur" 
+          class="ipt" 
+          type="text" 
+          placeholder='输入更多描述可以提高你的Get几率噢~' name="" id=""/>
+      </view>
+      <view class="word-limit">{{cardInfo.cardContent}}/100</view>
+    </view>
+    
+  </view>
+  <view class="me"> 
+  <view class="my-info">
+    <view class="user-avatar">
+      <image src="{{cardInfo.owner.avatarUrl?cardInfo.owner.avatarUrl:'cloud://cloud1-5gqp7vjo23b55255.636c-cloud1-5gqp7vjo23b55255-1305195095/userAvatar/likeyouAvatar (2).png'}}"></image>
+    </view>
+    <view 
+      class="'{{gender=='female'?'cuIcon-female':'cuIcon-male'}}' xl gender"
+      style="color:{{gender=='female' ? 'red':'blue'}}">
+    </view>
+    <view class="user-name">
+      {{cardInfo.owner.nickName?cardInfo.owner.nickName:'立刻有'}}
+    </view>
+    <view class="campus">
+      {{cardInfo.owner.campus?'沧海校区':"粤海校区"}}
+    </view>
+  </view>
+  <textarea  
+    bindblur = 'onGetContent'
+    placeholder="{{ originalWhatsup }}" 
+    class="introduce" name="" id=""></textarea>
+  <view class="word-nums">{{cardInfo.owner.whatsUp.length}}/30</view>
+</view>
+
+  <view class="times-date">
+    <view class="times">
+      <template is='my-title'
+  data="{{ title:'可GET次数', leftcolor:'#966EEB',bottom:'rgba(189,170,242,.6)'}}"/>
+    <view  
+      class="count-times"
+      bindtap="onChangeTimes">
+      <view 
+        data-type="move"
+        class="cuIcon-move xl " 
+        style="color:grey"
+        />
+      <view style="font-size:40rpx; line-height:62rpx">{{cardInfo.getTimes}}</view>
+      <view 
+      data-type="add"
+        class="cuIcon-add xl " 
+        style="color:grey"
+       />
+    </view>
+  </view>
+  <view class="date">
+    <template is='my-title'
+    data="{{ title:'展示时间(天）', leftcolor:'#966EEB',bottom:'rgba(189,170,242,.6)'}}"/>
+    <view 
+      class="count-times"
+      bindtap="onChangeDate">
+      <view 
+        class="cuIcon-move xl " 
+        style="color:grey"
+        data-type="move"/>
+      <view style="font-size:40rpx; line-height:62rpx">{{cardInfo.getDate}}</view>
+      <view class="cuIcon-add xl "data-type="add" style="color:grey"/>
+    </view>
+  </view>
+  </view>
+</view>

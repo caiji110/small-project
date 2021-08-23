@@ -6,7 +6,7 @@ App({
     showHeight:"",
     marginTop:""
   },
-  onLaunch() {
+  async onLaunch() {
     let navHeight=''
     let cachet = wx.getMenuButtonBoundingClientRect();
     let {height,top}  = cachet;
@@ -33,7 +33,7 @@ App({
         traceUser: true
       });
     }
-
+    
     console.log(cachet);
   },
   

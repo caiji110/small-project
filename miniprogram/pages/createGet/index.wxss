@@ -1,0 +1,295 @@
+/* miniprogram/pages/createGet/index.wxss */
+/* miniprogram/pages/createGetway/index.wxss */
+@import "../../colorui/icon.wxss";
+@import "../../colorui/main.wxss";
+@import "./template/MyTitle/index.wxss";
+@font-face {
+  font-family: 'loading';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_42wttsenkkq.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_42wttsenkkq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_42wttsenkkq.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_42wttsenkkq.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_42wttsenkkq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_42wttsenkkq.svg#Alibaba-PuHuiTi-Regular') format('svg'); /* iOS 4.1- */
+}
+
+.mask-layer{
+  position: fixed;
+  top: 0;
+  bottom: 50%;
+  right: 0;
+  left: 0;
+  background-color: rgb(215, 215, 215);
+}
+.comment-mask-layer{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(0,0,0,.16);
+}
+
+
+.top-btn{
+  padding-top:32rpx ;
+  margin-bottom: 50rpx;
+  display: flex;
+}
+.top-btn>view{
+color: #979797;
+font-weight: 500;
+font-size: 36rpx;
+text-align: center
+}
+.card-contanier{
+  margin:0 50rpx;
+}
+.top-btn>view+view{
+  margin-left:auto;
+  color: #787cf9;
+  font-weight: bold;
+  width: 100rpx;
+}
+.card-ipt{
+  width: 654rpx;
+  height: 422rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+.ipt{
+  height: 250rpx;
+  margin-left: 32rpx;
+  font-family: "PingFang SC";
+font-weight: normal;
+font-size: 28rpx;
+}
+.word-limit{
+  position: absolute;
+  right: 36rpx;
+  color: #979797;
+}
+.times-date{
+  margin-top: 60rpx;
+  display: flex;
+}
+
+.date{
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+.times{
+  margin-left: 40rpx;
+}
+.count-times{
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  margin-left: 38rpx;
+}
+.count-times view{
+  text-align: center;
+  margin-top: 50rpx;
+  margin-right: 32rpx;
+  width: 62rpx;
+  height: 62rpx;
+  font-size: 55rpx;
+  
+  background: rgba(173, 173, 173, 0.09);
+}
+.tips{
+  margin-top: 108rpx;
+  margin-left: 32rpx;
+  margin-bottom: 100rpx;
+  margin: 108rpx 0 100rpx 32rpx;
+}
+.tips-container{
+  margin-left: 35rpx;
+  margin-top: 30rpx;
+}
+.me{
+  position: relative;
+  width: 656rpx;
+  margin: 0 auto;
+  margin-top: 82rpx;
+  height: 230rpx;
+border-radius: 20rpx;
+background: rgba(173, 173, 173, 0.09);
+}
+.user-avatar{
+  width: 102rpx;
+height: 102rpx;
+
+position: relative;
+top: -32rpx;
+margin-left: 30rpx;
+}
+.gender{
+  color: blue;
+ 
+}
+.campus,.gender,.user-name{
+  position: relative;
+  top: -42rpx;
+  position: relative;
+  top: -42rpx;
+  margin:0 5rpx;
+}
+.campus{
+  color: #979797;
+}
+.my-info{
+  display: flex;
+  align-items: flex-end;
+}
+.user-avatar image {
+  width: 100%;
+  height: 100%;
+}
+.introduce{
+  height:80rpx;
+  margin-left: 30rpx;
+  padding: 20rpx;
+}
+.word-nums{
+  color:#979797;
+  position: absolute;
+  right: 38rpx;
+  bottom: 14rpx;
+}
+.setClipboardData-fail{
+  position: fixed;
+
+    top: 35%;
+    bottom: 40%;
+    left: 15%;
+    right: 15%;
+  background-color: white;
+  z-index: 10;
+}
+.show-comment{
+  
+ 
+  border-radius:50rpx 50rpx 0 0;
+  background-color: white;
+  width: 100vw;
+  max-height: 100%;
+  bottom: 0;
+  overflow: scroll;
+  
+}
+.back-icon{
+  font-size: 42rpx;
+  width: 45rpx;
+  height: 45rpx;
+  padding: 5rpx;
+  margin-left: 20rpx;
+  line-height: 45rpx;
+}
+.nav-bar{
+  display: flex;
+  position: fixed;
+  z-index: 11;
+  width: 100vw;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  background-color: white;
+  border-radius: 30rpx;
+}
+.topBar-title{
+  width: 150rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+  margin: 0 auto;
+  position: relative;
+  left: -22rpx;
+}
+.comment-contanier{
+  margin:100rpx 48rpx 48rpx 48rpx
+}
+.comment-list{
+  margin-top: 30rpx;
+  margin-bottom:160rpx ;
+ 
+}
+.comment-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+.comment-avatar image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50rpx;
+}
+.user-info{
+  display: flex;
+  align-items: center;
+}
+.other-info .top,.other-info .bottom{
+  display: flex;
+  align-items: center;
+  margin-left: 35rpx;
+}
+.other-info .top>view,.other-info .bottom>view{
+  margin-right: 15rpx;
+}
+.other-name{
+  font-family: "PingFang SC";
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.user-campus,.user-grade{
+  margin-top: 10rpx;
+  font-weight: 500;
+  font-size: 20rpx;
+}
+.comment-content{
+  font-size: 26rpx;
+  position: relative;
+  margin:35rpx 0 20rpx 10rpx;
+  padding: 0 0 20rpx 20rpx;
+ 
+  border-bottom: 2rpx solid rgba(235, 235, 235,.2);
+}
+.comment-date {
+  position: absolute;
+  font-size: 26rpx;
+  color: #adadad;
+  right: 0;
+  bottom: 0;
+}
+.comment-del{
+  margin-right: 10rpx;
+  padding:0 20rpx;
+  border-radius: 15rpx;
+  text-align: center;
+  line-height: 26rpx;
+  color: white;
+  font-weight: bold;
+  background-color: #787cf9;
+}
+.input-comment{
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 50rpx;
+  background-color: white;
+}
+.input-comment input{
+ 
+  padding-left: 20rpx;
+  line-height: 68rpx;
+  width: 654rpx;
+height: 68rpx;
+border-radius: 34rpx;
+margin: 0 auto;
+background: rgba(173, 173, 173, 0.19);
+}

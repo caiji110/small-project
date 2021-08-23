@@ -13,10 +13,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad:async function (options) {
+    // let res=await wx.cloud.callFunction({
+    //   name:"SendMessage",
+    // })
+    // console.log(res);
   },
-
   onClickPagesBtn(e){
     let index = e.target.dataset.index
  
@@ -33,10 +35,15 @@ Page({
        show:false
      })
    }
-   console.log(index);
+   //console.log(index);
    this.setData({
     currentIndex: index
   })
+  },
+  onClickGetPubilshBtn(){
+    wx.navigateTo({
+      url: '../createGet/index',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

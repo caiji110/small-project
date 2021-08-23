@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/index",
-
-    "pages/Get/index"
+    "pages/createGet/index",
     
+    "pages/login/index",
+    "pages/Get/index"
     
   ],
   "window": {

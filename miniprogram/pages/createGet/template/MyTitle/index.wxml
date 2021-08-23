@@ -1,0 +1,7 @@
+<template name="my-title">
+  <view class="type">
+    <view class="leftborder" style="background-color:{{ leftcolor }}"></view>
+    <view class="type-text">{{ title }}</view>
+    <view class="bottom-border" style="background-color:{{bottom}}" ></view>
+  </view>
+</template>

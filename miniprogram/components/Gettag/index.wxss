@@ -1,0 +1,47 @@
+/* components/Gettag/index.wxss */
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_zf56hebw48o.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_zf56hebw48o.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_zf56hebw48o.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_zf56hebw48o.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_zf56hebw48o.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_zf56hebw48o.svg#NotoSansHans-Black') format('svg'); /* iOS 4.1- */
+}
+.tag-root {
+  width: max-content;
+  border: 1rpx solid #aeb0f8;
+  padding: 10rpx 40rpx;
+  padding-left: 5rpx;
+  border-radius: 40rpx;
+  background: transparent;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  margin: 22rpx;
+}
+
+.tag-text {
+  width: max-content;
+  place-content: center;
+  text-align: center;
+  letter-spacing: 0.01px;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.icon {
+  font-weight: bold;
+  margin-right: 15rpx;
+  background-color: #787CF9;
+  color: #fff;
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 17rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 34rpx;
+  font-family: 'webfont';
+}

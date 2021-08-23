@@ -1,0 +1,32 @@
+.type{
+  margin-left: 38rpx;
+  height: 40rpx;
+  width: max-content;
+}
+.leftborder{
+  width: 10rpx;
+  height: 28rpx;
+  border-radius: 15rpx;
+  background-color: #632ae9;
+  position: relative;
+  top: 26rpx;
+}
+.bottom-border{
+  width: 103%;
+  height: 14rpx;
+  border-radius: 10rpx;
+  background-color: rgba(189,170,242,.6);
+}
+.type-text{
+ 
+  position: relative;
+  top: 4rpx;
+  font-family: "PingFang SC";
+  font-weight: bold;
+  font-size: 38rpx;
+  letter-spacing: 0;
+  line-height: 7px;
+  text-align: left;
+  color: #12181f;
+  margin-left: 12rpx;
+}

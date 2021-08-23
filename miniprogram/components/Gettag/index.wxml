@@ -1,0 +1,10 @@
+<!--components/Gettag/index.wxml-->
+
+<view 
+  class="tag-root"
+  
+  style="color: {{tagInfo.color}};border-color: {{tagInfo.color}}">
+    <view class="icon" style="background-color:{{tagInfo.color}}">#</view>
+    <text class="tag-text">{{tagInfo.title}}</text>
+</view>
+
